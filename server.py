@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
-
+from pyzbar.pyzbar import decode
+from PIL import Image
 app = Flask(__name__)
 
 @app.route('/api/qr-code', methods=['POST'])
